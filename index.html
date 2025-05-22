@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Palmas Mexican Restaurant - 2025 Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #d32f2f;
+            --primary-dark: #9a0007;
+            --secondary: #388e3c;
+            --accent: #ffc107;
+            --text-primary: #212121;
+            --text-secondary: #757575;
+            --bg-light: #fafafa;
+            --bg-white: #ffffff;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --shadow-hover: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        header.hidden {
+            transform: translateY(-100%);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .address {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 0.25rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--bg-white);
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 90;
+            box-shadow: var(--shadow);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-scroll {
+            display: flex;
+            padding: 0.5rem;
+            gap: 0.5rem;
+            min-width: max-content;
+        }
+
+        .nav-btn {
+            background: var(--bg-white);
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .nav-btn:hover,
+        .nav-btn.active {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .category {
+            background: var(--bg-white);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, var(--secondary) 0%, #2e7d32 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .menu-item {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+            transition: background 0.2s ease;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item:hover {
+            background: #f5f5f5;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.5rem;
+            gap: 1rem;
+        }
+
+        .item-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            flex: 1;
+        }
+
+        .item-price {
+            color: var(--primary);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .item-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        .item-options {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Special Notes */
+        .info-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+            color: #856404;
+        }
+
+        /* Drinks Grid */
+        .drinks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .drink-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .drink-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .drinks-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Las Palmas</h1>
+            <p>Authentic Mexican Restaurant</p>
+            <p class="address">1730 Yajome St. • Napa, CA</p>
+            <p class="contact">
+                <a href="tel:707-257-1514" style="color: white; text-decoration: none;">📞 707-257-1514</a> • 
+                <a href="https://napalaspalmas.wordpress.com" target="_blank" style="color: white; text-decoration: none;">🌐 napalaspalmas.wordpress.com</a>
+            </p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-scroll">
+            <button class="nav-btn active" data-section="appetizers">
+                Appetizers & Salads
+            </button>
+            <button class="nav-btn" data-section="tacos">
+                Tacos
+            </button>
+            <button class="nav-btn" data-section="burritos">
+                Burritos
+            </button>
+            <button class="nav-btn" data-section="entrees">
+                Entrées
+            </button>
+            <button class="nav-btn" data-section="seafood">
+                Seafood
+            </button>
+            <button class="nav-btn" data-section="burgers">
+                Burgers & Sandwiches
+            </button>
+            <button class="nav-btn" data-section="breakfast">
+                Breakfast
+            </button>
+            <button class="nav-btn" data-section="sides">
+                Sides
+            </button>
+            <button class="nav-btn" data-section="drinks">
+                Drinks
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Appetizers Section -->
+        <div class="section active" id="appetizers">
+            <div class="category">
+                <div class="category-header">
+                    HOT OPTIONS
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">FRIED CALAMARI</div>
+                        <div class="item-price">$14</div>
+                    </div>
+                    <div class="item-description">Topped with spicy chile chipotle aioli & cilantro</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">NACHOS</div>
+                        <div class="item-price">$11</div>
+                    </div>
+                    <div class="item-description">Monterey cheese, beans, sour cream, guacamole, pico de gallo, jalapeño</div>
+                    <div class="item-options">With MEAT $14 • With PRAWNS $18</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">QUESADILLA</div>
+                        <div class="item-price">$7</div>
+                    </div>
+                    <div class="item-description">Monterey cheese on flour tortillas, a side of sour cream, guacamole & pico de gallo</div>
+                    <div class="item-options">With MEAT $12 • With SPINACH & MUSHROOMS $11 • With PRAWNS (a la diabla, al mojo de ajo, or white wine) $15</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">TORTILLA SOUP</div>
+                        <div class="item-price">$7</div>
+                    </div>
+                    <div class="item-description">Chicken broth, monterey cheese & pico de gallo</div>
+                    <div class="item-options">With GRILLED CHICKEN $10</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">7 MARES - 7 seas soup</div>
+                        <div class="item-price">$25</div>
+                    </div>
+                    <div class="item-description">Clams, prawns, mussels, tilapia, octopus, salmon & calamari, side of tortillas or bread</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">TACO SALAD</div>
+                        <div class="item-price">$11</div>
+                    </div>
+                    <div class="item-description">Meat, beans, rice, lettuce, tomato, cheese, sour cream, guacamole</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">VEGGIE TACO SALAD</div>
+                        <div class="item-price">$11</div>
+                    </div>
+                    <div class="item-description">Mushroom, whole beans, lettuce, tomato, cheese, sour cream, avocado</div>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-header">
+                    COOL AND REFRESHING
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">AHI & FRUIT SALAD</div>
+                        <div class="item-price">$13</div>
+                    </div>
+                    <div class="item-description">Seared black & blue, served with in-season fruit, topped with wasabi aioli</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">TOSTADA DE CEVICHE</div>
+                        <div class="item-price">$9</div>
+                    </div>
+                    <div class="item-description">Prawns, octopus, or both, mixed in onion, tomato, avocado, cilantro & lime</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CAMPECHANA COCKTAIL*</div>
+                        <div class="item-price">SMALL $18 • LARGE $24</div>
+                    </div>
+                    <div class="item-description">Seafood cocktail (choose: prawns, octopus & oysters), with tomato, onion, avocado & cilantro (optional chile Serrano)</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">PEAR SALAD</div>
+                        <div class="item-price">$10</div>
+                    </div>
+                    <div class="item-description">Romaine, carrots, pistachios, blue cheese, orange-sesame dressing</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">BEET SALAD</div>
+                        <div class="item-price">$10</div>
+                    </div>
+                    <div class="item-description">Romaine, green beans, feta cheese, balsamic vinaigrette</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CAESAR SALAD</div>
+                        <div class="item-price">$8</div>
+                    </div>
+                    <div class="item-description">Romaine, parmesan cheese, croutons & caesar dressing</div>
+                    <div class="item-options">With GRILLED CHICKEN $14 • With PRAWNS $18</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                All have lettuce, onion & tomato. Add fries+$4 or salad (pear, beet, caesar)+$5
+            </div>
+                *CONSUMING RAW OR UNDERCOOKED MEATS, POULTRY, SEAFOOD, SHELLFISH, OR EGGS MAY INCREASE YOUR RISK OF FOODBORNE ILLNESS, ESPECIALLY IF YOU HAVE CERTAIN MEDICAL CONDITIONS
+            </div>
+        </div>
+
+        <!-- Tacos Section -->
+        <div class="section" id="tacos">
+            <div class="category">
+                <div class="category-header">
+                    TACOS ~ served a la carte
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">SOFT TACO</div>
+                        <div class="item-price">$2.75</div>
+                    </div>
+                    <div class="item-description">Meat, topped with cilantro, onion, tomatillo salsa on 4" white corn tortilla</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">HARD SHELL TACO</div>
+                        <div class="item-price">$3.25</div>
+                    </div>
+                    <div class="item-description">Meat, lettuce, tomato, cheese, sour cream & tomatillo salsa</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">LARGE VEGGIE OR GRILLED CHICKEN SOFT TACO</div>
+                        <div class="item-price">$4</div>
+                    </div>
+                    <div class="item-description">Topped with cilantro, onion, tomatillo salsa</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">1 FISH TACO</div>
+                        <div class="item-price">$7</div>
+                    </div>
+                    <div class="item-description">Tilapia sautéed in white wine, tomato & onion topped with cilantro & tomatillo salsa</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">1 PRAWN TACO</div>
+                        <div class="item-price">$8</div>
+                    </div>
+                    <div class="item-description">Prawns sautéed in garlic, habanero, or white wine, tomato & onion, topped with cilantro & salsa</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>MEAT Options:</strong> Rotisserie Chicken, Carne Asada/Grilled Steak, Ground Beef, Carnitas, Pastor
+            </div>
+        </div>
+
+        <!-- Burritos Section -->
+        <div class="section" id="burritos">
+            <div class="category">
+                <div class="category-header">
+                    ∆ BURRITOS
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">LAS PALMAS</div>
+                        <div class="item-price">$13</div>
+                    </div>
+                    <div class="item-description">Meat, beans, rice, guacamole, pico de gallo & jalapeños topped with cheese, red & green salsa</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">THE 2 IN 1</div>
+                        <div class="item-price">$14</div>
+                    </div>
+                    <div class="item-description">Las Palmas burrito w/ chile relleno instead of meat</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CHILE VERDE</div>
+                        <div class="item-price">$13</div>
+                    </div>
+                    <div class="item-description">Carnitas sautéed in spicy green salsa, beans, rice, guacamole, pico de gallo & jalapeños, topped with cheese & green salsa</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">MARIA's MOLE BURRITO</div>
+                        <div class="item-price">$15</div>
+                    </div>
+                    <div class="item-description">Grilled chicken, rice, beans, and cheese, topped with Maria's Mole (Guanajuato style)</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">VEGETARIAN</div>
+                        <div class="item-price">$11</div>
+                    </div>
+                    <div class="item-description">Mushrooms, whole beans, lettuce, tomato, avocado, sour cream & cheese, wrapped in foil</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">SUPER</div>
+                        <div class="item-price">$10</div>
+                    </div>
+                    <div class="item-description">Meat, beans, rice, guacamole, sour cream, cheese & jalapeños, wrapped in foil</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">REGULAR</div>
+                        <div class="item-price">$8</div>
+                    </div>
+                    <div class="item-description">Meat, beans & rice, wrapped in foil</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">BEAN & CHEESE</div>
+                        <div class="item-price">$5</div>
+                    </div>
+                    <div class="item-description">Simple & wrapped in foil</div>
+                    <div class="item-options">With RICE $7</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>Add to your burrito:</strong><br>
+                ∆ add extra meat +$3<br>
+                ∆ add prawns: mojo de ajo, a la Diabla, o vino blanco +$5<br>
+                ∆ add grilled chicken +$4<br>
+                ∆ add grilled veggies +$3<br>
+                ∆ add or extra: sour cream, cheese, or/o pico de gallo +$1.75<br>
+                ∆ cheese & salsa on top +$3.75<br>
+                ∆ add or extra: guacamole +$2.75
+            </div>
+
+            <div class="info-box">
+                <strong>MEAT:</strong> Rotisserie Chicken, Carne Asada/Grilled Steak, Ground Beef, Carnitas, Pastor<br>
+                <strong>BEANS:</strong> Refried Pinto, Whole Pinto, Black (corn, onion, tomato, serranos & cumin)<br>
+                <strong>RICE</strong> (made with chicken stock)
+            </div>
+        </div>
+
+        <!-- Entrees Section -->
+        <div class="section" id="entrees">
+            <div class="category">
+                <div class="category-header">
+                    MEAT or VEGGIE ENTRÉES
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">FAJITAS</div>
+                        <div class="item-price">CHICKEN or BEEF $16</div>
+                    </div>
+                    <div class="item-description">Sautéed in bell peppers, onion & our oregano-vinegar blend, side of tomatillo salsa & tortillas</div>
+                    <div class="item-options">CHICKEN & BEEF or VEGGIE $18 • Only PRAWNS $20 • MEAT & PRAWNS $24</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CARNITAS</div>
+                        <div class="item-price">$15</div>
+                    </div>
+                    <div class="item-description">With tortillas & side tomatillo salsa</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CHILE VERDE</div>
+                        <div class="item-price">$15</div>
+                    </div>
+                    <div class="item-description">Carnitas in Green salsa, tomato & onion, & tortillas</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CARNE ASADA</div>
+                        <div class="item-price">$16</div>
+                    </div>
+                    <div class="item-description">Grilled shoulder clod lightly seasoned with salt & pepper, side of tomatillo salsa & tortillas</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CHILE RELLENO</div>
+                        <div class="item-price">$15</div>
+                    </div>
+                    <div class="item-description">Monterey cheese stuffed chile pasilla, battered and pan-fried, with salsa ranchera on top, & tortillas</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CHIMICHANGA</div>
+                        <div class="item-price">$15</div>
+                    </div>
+                    <div class="item-description">Meat or veggies, beans & cheese, rolled into a burrito & fried, sour cream & guacamole on top</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">ENCHILADA</div>
+                        <div class="item-price">One $11 • Two $15</div>
+                    </div>
+                    <div class="item-description">Meat or cheese, topped w/ cheese & red or green salsa</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">THREE FLAUTAS</div>
+                        <div class="item-price">$15</div>
+                    </div>
+                    <div class="item-description">Veggies or meat rolled in corn tortilla flutes, topped with cheese, tomato, sour cream, and guacamole</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>ENTREES - Served with Rice & Beans</strong><br>
+                RICE (made with chicken broth); BEANS: Refried, Whole, or Black (corn, onion, tomato, serranos & cumin)
+            </div>
+        </div>
+
+        <!-- Seafood Section -->
+        <div class="section" id="seafood">
+            <div class="category">
+                <div class="category-header">
+                    SEAFOOD ENTREES
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">PRAWN OPTIONS</div>
+                        <div class="item-price">$19</div>
+                    </div>
+                    <div class="item-description">Served with tortillas</div>
+                    <div class="item-options">
+                        –A LA CUCARACHA: huichol-garlic-lime<br>
+                        –AL MOJO DE AJO: garlic & herbs<br>
+                        –A LA DIABLA: tomato-habanero
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CRAB ENCHILADAS</div>
+                        <div class="item-price">One $15 • Two $19</div>
+                    </div>
+                    <div class="item-description">Crab sautéed in sour cream, tomato & onion, topped w/ cheese & red or green salsa</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">"MOJARA" ~ WHOLE DEEP FRIED TILAPIA</div>
+                        <div class="item-price">$19</div>
+                    </div>
+                    <div class="item-description">Topped with chipotle aioli on top & side of tortillas</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">FISH TACOS</div>
+                        <div class="item-price">One $13 • Two $17</div>
+                    </div>
+                    <div class="item-description">Tilapia sautéed in white wine, tomato & onion, topped with cilantro & salsa</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">PRAWN TACOS</div>
+                        <div class="item-price">One $14 • Two $18</div>
+                    </div>
+                    <div class="item-description">Sautéed in garlic, habanero, or white wine, tomato & onion, cilantro & salsa on top</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>ENTREES - Served with Rice & Beans</strong><br>
+                RICE (made with chicken broth); BEANS: Refried, Whole, or Black (corn, onion, tomato, serranos & cumin)
+            </div>
+        </div>
+
+        <!-- Burgers Section -->
+        <div class="section" id="burgers">
+            <div class="category">
+                <div class="category-header">
+                    BURGERS & SANDWICHES
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">BURGER*</div>
+                        <div class="item-price">$7</div>
+                    </div>
+                    <div class="item-description">With mayo</div>
+                    <div class="item-options">+cheddar $0.75 • +blue cheese $1.75</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">GRILLED CHICKEN</div>
+                        <div class="item-price">$9</div>
+                    </div>
+                    <div class="item-description">With mayo</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">TORTA</div>
+                        <div class="item-price">$9</div>
+                    </div>
+                    <div class="item-description">Mexican sandwich with meat, beans, lettuce, tomato, avocado & mayo</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                All have lettuce, onion & tomato. Add fries+$4 or salad (pear, beet, caesar)+$5
+            </div>
+        </div>
+
+        <!-- Breakfast Section -->
+        <div class="section" id="breakfast">
+            <div class="category">
+                <div class="category-header">
+                    BREAKFAST ~ served all day
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CHILAQUILES*</div>
+                        <div class="item-price">$11</div>
+                    </div>
+                    <div class="item-description">Fried corn tortilla chips in salsa de tomate, topped w/ onion, tomato, cheese, sour cream & avocado</div>
+                    <div class="item-options">With 2 Eggs $13 • With Meat & 2 Eggs $17</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">MACHACA</div>
+                        <div class="item-price">$16</div>
+                    </div>
+                    <div class="item-description">Scramble with bell peppers, tomato, onion. Topped with sour cream & avocado, sides of rice, beans & tortillas</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">HUEVOS CON CHORIZO</div>
+                        <div class="item-price">$16</div>
+                    </div>
+                    <div class="item-description">Scramble with tomato, onion. Topped with sour cream & guacamole, sides of rice, beans & tortillas</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">HUEVOS RANCHEROS*</div>
+                        <div class="item-price">$15</div>
+                    </div>
+                    <div class="item-description">Tortilla topped w/2 eggs, beans & salsa ranchera, with a side of rice & tortillas</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sides Section -->
+        <div class="section" id="sides">
+            <div class="category">
+                <div class="category-header">
+                    SIDES & LITTLE SOMETHINGS
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">1 MEAT ENCHILADA</div>
+                        <div class="item-price">$4.50</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">GUACAMOLE (with Chips)</div>
+                        <div class="item-price">$7</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">AVOCADO</div>
+                        <div class="item-price">$4.75</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">FRIES</div>
+                        <div class="item-price">$4</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">1 CHILE RELLENO</div>
+                        <div class="item-price">$8</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">BEANS</div>
+                        <div class="item-price">$4</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">RICE</div>
+                        <div class="item-price">$4</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">VEGGIES</div>
+                        <div class="item-price">$6</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">1 CHIMICHANGA</div>
+                        <div class="item-price">$9</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">SOUR CREAM</div>
+                        <div class="item-price">$1</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">TOMATILLO SALSA</div>
+                        <div class="item-price">$1.50</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">LIME or LEMON</div>
+                        <div class="item-price">$1</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">3 FLAUTAS</div>
+                        <div class="item-price">$9</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">DRESSING</div>
+                        <div class="item-price">$1.75</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">HABANERO SALSA</div>
+                        <div class="item-price">$1.50</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">TORTILLAS</div>
+                        <div class="item-price">$2</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">POTATO</div>
+                        <div class="item-price">$7</div>
+                    </div>
+                    <div class="item-description">Blue cheese gratine, roasted with garlic, or mashed</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">CHIPS & SALSA TO GO</div>
+                        <div class="item-price">$4</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-name">GRILLED CHILES, ONIONS w/ SEASONING</div>
+                        <div class="item-price">$2.75</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                extras may be extra
+            </div>
+        </div>
+
+        <!-- Drinks Section -->
+        <div class="section" id="drinks">
+            <div class="category">
+                <div class="category-header">
+                    DRINKS/BEBIDAS
+                </div>
+                
+                <div class="drinks-grid">
+                    <div>
+                        <div class="drink-item">
+                            <span>Aguas Frescas</span>
+                            <span>$4 (1 refill)</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Coke Bottle</span>
+                            <span>$3.50</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Wine Glass</span>
+                            <span>$7</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Draft Beer 16 oz</span>
+                            <span>$5</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Draft Beer 24 oz</span>
+                            <span>$8.50</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Draft Beer 32 oz</span>
+                            <span>$10.25</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="drink-item">
+                            <span>Iced Tea</span>
+                            <span>$4 (refills)</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>½ Liter Bottle</span>
+                            <span>$5</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Wine Bottle</span>
+                            <span>$28</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>12 oz & 9.75% a/v Bottled Beer</span>
+                            <span>$7.75</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Jarritos/Snapple/Stewarts</span>
+                            <span>$3.50</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Can Soda</span>
+                            <span>$2</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="drink-item">
+                            <span>Wine Margarita</span>
+                            <span>$6.75</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>22 oz & 9.75% a/v Bottled Beer</span>
+                            <span>$10.25</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Mexican Chocolate</span>
+                            <span>$4</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Corkage</span>
+                            <span>$10</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Margarita Jarra</span>
+                            <span>$27</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>12 oz Bottled Beer</span>
+                            <span>$5</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="drink-item">
+                            <span>Hot Tea</span>
+                            <span>$2.75</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Non-Alcoholic Beer</span>
+                            <span>$5</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>22/24 oz Bottled Beer</span>
+                            <span>$9.75</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Coffee</span>
+                            <span>$2.75 (refills)</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>32 oz Bottled Beer</span>
+                            <span>$13.50</span>
+                        </div>
+                        <div class="drink-item">
+                            <span>Michelada</span>
+                            <span>+$2 to Your Beer Price</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Las Palmas Mexican Restaurant</p>
+        <p>1730 Yajome St. • Napa, CA</p>
+        <p>*CONSUMING RAW OR UNDERCOOKED MEATS, POULTRY, SEAFOOD, SHELLFISH, OR EGGS MAY INCREASE YOUR RISK OF FOODBORNE ILLNESS, ESPECIALLY IF YOU HAVE CERTAIN MEDICAL CONDITIONS</p>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const sections = document.querySelectorAll('.section');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetSection = this.getAttribute('data-section');
+                    
+                    // Remove active class from all buttons and sections
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    sections.forEach(section => section.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Show target section
+                    const targetElement = document.getElementById(targetSection);
+                    if (targetElement) {
+                        targetElement.classList.add('active');
+                    }
+                });
+            });
+
+            // Header scroll behavior
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+</body>
+</html>
