@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Palmas Cafe Menu - Napa, CA</title>
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts for vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Open Sans', sans-serif; background: #f8f9fa; color: #333; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .menu-section { background: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 30px; }
+        .dish { margin-bottom: 15px; }
+        .dish-name { font-weight: bold; }
+        .dish-desc { font-style: italic; color: #555; }
+        .price { float: right; font-weight: bold; color: #d32f2f; }
+        header { background: #d32f2f; color: white; padding: 40px 20px; text-align: center; }
+        footer { text-align: center; padding: 20px; background: #333; color: white; }
+        .notes { font-size: 0.9em; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Las Palmas Cafe</h1>
+    <p>1730 Yajome Street, Napa, CA ~ 707-257-1514</p>
+    <p>Authentic Mexican Cuisine</p>
+</header>
+
+<div class="container my-5">
+
+    <div class="menu-section">
+        <h2 class="text-center">Appetizers, Seafood Cocktails, Soups & Salads (homemade dressings)</h2>
+        
+        <h3>Cool and Refreshing</h3>
+        <div class="dish">
+            <span class="dish-name">AHI & FRUIT SALAD</span> <span class="price">14</span>
+            <div class="dish-desc">seared black & blue, served with in-season fruit, topped with wasabi aioli</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">TOSTADA DE CEVICHE</span> <span class="price">10</span>
+            <div class="dish-desc">prawns, octopus, or both, mixed in onion, tomato, avocado, cilantro & lime</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">CAMPECHANA COCKTAIL*</span> <span class="price">SMALL - 19 LARGE - 26</span>
+            <div class="dish-desc">Seafood cocktail (choose: prawns, octopus & oysters), with tomato, onion, avocado & cilantro (optional chile Serrano)</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">PEAR SALAD</span> <span class="price">11</span>
+            <div class="dish-desc">romaine, carrots, pistachios, blue cheese, orange-sesame dressing</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">BEET SALAD</span> <span class="price">11</span>
+            <div class="dish-desc">romaine, green beans, feta cheese, balsamic vinaigrette</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">CAESAR SALAD</span> <span class="price">11</span>
+            <div class="dish-desc">romaine, parmesan cheese, croutons & caesar dressing - with GRILLED CHICKEN 15 - with PRAWNS 18</div>
+        </div>
+
+        <h3>Hot Options</h3>
+        <div class="dish">
+            <span class="dish-name">FRIED CALAMARI</span> <span class="price">15</span>
+            <div class="dish-desc">topped with spicy chile chipotle aioli & cilantro</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">NACHOS</span> <span class="price">12</span>
+            <div class="dish-desc">monterey cheese, beans, sour cream, guacamole, pico de gallo, jalapeño - with MEAT 15 - with PRAWNS 19</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">QUESADILLA</span> <span class="price">7</span>
+            <div class="dish-desc">monterey cheese on flour tortillas, a side of sour cream, guacamole & pico de gallo - with MEAT 13 - with SPINACH & MUSHROOMS 13 - with PRAWNS (a la diabla, al mojo de ajo, or white wine) 17</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">TORTILLA SOUP</span> <span class="price">8</span>
+            <div class="dish-desc">chicken broth, monterey cheese & pico de gallo – with GRILLED CHICKEN 11</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">7 MARES-7 seas soup</span> <span class="price">26</span>
+            <div class="dish-desc">clams, prawns, mussels, tilapia, octopus, salmon & calamari, side of tortillas or bread</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">TACO SALAD</span> <span class="price">12.50</span>
+            <div class="dish-desc">meat, beans, rice, lettuce, tomato, cheese, sour cream, guacamole</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">VEGGIE TACO SALAD</span> <span class="price">12.50</span>
+            <div class="dish-desc">mushroom, whole beans, lettuce, tomato, cheese, sour cream, avocado</div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2 class="text-center">Tacos ~ served a la carte</h2>
+        <div class="dish">
+            <span class="dish-name">SOFT TACO</span> <span class="price">3</span>
+            <div class="dish-desc">meat, topped with cilantro, onion, tomatillo salsa on 4" white corn tortilla</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">HARD SHELL TACO</span> <span class="price">3.75</span>
+            <div class="dish-desc">meat, lettuce, tomato, cheese, sour cream & tomatillo salsa</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">LARGE VEGGIE OR GRILLED CHICKEN SOFT TACO</span> <span class="price">6</span>
+            <div class="dish-desc">topped with cilantro, onion, tomatillo salsa</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">1 FISH TACO</span> <span class="price">8</span>
+            <div class="dish-desc">tilapia sautéed in white wine, tomato & onion topped with cilantro & tomatillo salsa</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">1 PRAWN TACO</span> <span class="price">9</span>
+            <div class="dish-desc">prawns sautéed in garlic, habanero, or white wine, tomato & onion, topped with cilantro & salsa</div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2 class="text-center">Burritos</h2>
+        <p>MEAT: Rotisserie Chicken, Carne Asada/Grilled Steak, Ground Beef, Carnitas, Pastor</p>
+        <p>BEANS: Refried Pinto, Whole Pinto, Black (corn, onion, tomato, serranos & cumin) | RICE (made with chicken stock)</p>
+        <div class="dish">
+            <span class="dish-name">LAS PALMAS</span> <span class="price">15</span>
+            <div class="dish-desc">meat, beans, rice, guacamole, pico de gallo & jalapeños topped with cheese, red & green salsa</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">THE 2 IN 1</span> <span class="price">15</span>
+            <div class="dish-desc">Las Palmas burrito w/ chile relleno instead of meat</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">CHILE VERDE</span> <span class="price">15</span>
+            <div class="dish-desc">carnitas sautéed in spicy green salsa, beans, rice, guacamole, pico de gallo & jalapeños, topped with cheese & green salsa</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">MARIA's MOLE BURRITO</span> <span class="price">16</span>
+            <div class="dish-desc">grilled chicken, rice, beans, and cheese, topped with Maria's Mole (Guanajuato style)</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">VEGETARIAN</span> <span class="price">15</span>
+            <div class="dish-desc">mushrooms, whole beans, lettuce, tomato, avocado, sour cream & cheese, wrapped in foil</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">SUPER</span> <span class="price">12</span>
+            <div class="dish-desc">meat, beans, rice, guacamole, sour cream, cheese & jalapeños, wrapped in foil</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">REGULAR</span> <span class="price">9</span>
+            <div class="dish-desc">meat, beans & rice, wrapped in foil</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">BEAN & CHEESE</span> <span class="price">6</span>
+            <div class="dish-desc">simple & wrapped in foil - with RICE 8</div>
+        </div>
+        <h3>Add to your burrito</h3>
+        <ul>
+            <li>▲ add extra meat +4</li>
+            <li>▲ add grilled veggies +4</li>
+            <li>▲ cheese & salsa on top +4</li>
+            <li>▲ add prawns: mojo de ajo, a la Diabla, o vino blanco +7</li>
+            <li>▲ add or extra: sour cream, cheese, or/o pico de gallo +2</li>
+            <li>▲ add or extra: guacamole +3</li>
+            <li>▲ add grilled chicken +5</li>
+        </ul>
+    </div>
+
+    <div class="menu-section">
+        <h2 class="text-center">Entrees - Served with Rice & Beans</h2>
+        <p>RICE (made with chicken broth); BEANS: Refried, Whole, or Black (corn, onion, tomato, serranos & cumin)</p>
+        
+        <h3>Seafood Entrees</h3>
+        <div class="dish">
+            <span class="dish-name">PRAWN OPTIONS</span> <span class="price">19.75</span>
+            <div class="dish-desc">served with tortillas - A LA CUCARACHA: huichol-garlic-lime - AL MOJO DE AJO: garlic & herbs - A LA DIABLA: tomato-habanero</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">CRAB ENCHILADAS</span> <span class="price">One- 17 Two- 21</span>
+            <div class="dish-desc">crab sautéed in sour cream, tomato & onion, topped w/ cheese & red or green salsa</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">“MOJARA” ~ WHOLE DEEP FRIED TILAPIA</span> <span class="price">19</span>
+            <div class="dish-desc">topped with chipotle aioli on top & side of tortillas</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">FISH TACOS</span> <span class="price">One - 14 Two - 18</span>
+            <div class="dish-desc">tilapia sautéed in white wine, tomato & onion, topped with cilantro & salsa</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">PRAWN TACOS</span> <span class="price">One-15 Two- 19</span>
+            <div class="dish-desc">sauteed in garlic, habanero, or white wine, tomato & onion, cilantro & salsa on top</div>
+        </div>
+
+        <h3>Meat or Veggie Entrées</h3>
+        <div class="dish">
+            <span class="dish-name">FAJITAS</span> <span class="price"></span>
+            <div class="dish-desc">sautéed in bell peppers, onion & our oregano-vinegar blend, side of tomatillo salsa & tortillas: CHICKEN or BEEF 17 - CHICKEN & BEEF or VEGGIE 18 - only PRAWNS 21 - MEAT & PRAWNS 25</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">CARNITAS or CHILE VERDE</span> <span class="price">17</span>
+            <div class="dish-desc">(Carnitas in Green salsa, tomato & onion) & tortillas & tortillas with side tomatillo salsa</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">CARNE ASADA</span> <span class="price">17</span>
+            <div class="dish-desc">grilled shoulder clod lightly seasoned with salt & pepper, side of tomatillo salsa & tortillas</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">CHILE RELLENO</span> <span class="price">17</span>
+            <div class="dish-desc">monterey cheese stuffed chile pasilla, battered and pan-fried, with salsa ranchera on top, & tortillas</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">CHIMICHANGA</span> <span class="price">17</span>
+            <div class="dish-desc">meat or veggies, beans & cheese, rolled into a burrito & fried, sour cream & guacamole on top</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">ENCHILADA</span> <span class="price">One -12 Two - 16.5</span>
+            <div class="dish-desc">meat or cheese, topped w/ cheese & red or green salsa</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">THREE FLAUTAS</span> <span class="price">17</span>
+            <div class="dish-desc">veggies or meat rolled in corn tortilla flutes, topped with cheese, tomato, sour cream, and guacamole</div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2 class="text-center">Burgers & Sandwiches</h2>
+        <p>All have lettuce, onion & tomato. Add fries+4 or salad (pear, beet, ceasar)+5</p>
+        <div class="dish">
+            <span class="dish-name">BURGER*</span> <span class="price">8.5</span>
+            <div class="dish-desc">with mayo - +cheddar 1.25 +blue cheese 2.75</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">GRILLED CHICKEN SANDWICH</span> <span class="price">13</span>
+            <div class="dish-desc">avocado, jalapeños & mayo, on sourdough</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">AHI BURGER*</span> <span class="price">18</span>
+            <div class="dish-desc">seared black & blue, and chile chipotle aioli</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">TORTA DE MILANESA</span> <span class="price">13</span>
+            <div class="dish-desc">chicken breast breaded in panko with avocado, jalapeños & chile chipotle aioli</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">TORTA MEXICANA</span> <span class="price">13</span>
+            <div class="dish-desc">meat, beans, lettuce, sour cream, guacamole & jalapeños</div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2 class="text-center">Sides & Little Somethings</h2>
+        <div class="dish">
+            <span class="dish-name">1 MEAT ENCHILADA</span> <span class="price">5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">1 CHILE RELLENO</span> <span class="price">9</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">1 CHIMICHANGA</span> <span class="price">9</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">3 FLAUTAS</span> <span class="price">10</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">POTATO</span> <span class="price">7.5</span>
+            <div class="dish-desc">blue cheese gratine, roasted with garlic, or mashed</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">GRILLED CHILES, ONIONS w/ SEASONING</span> <span class="price">3</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">GUACAMOLE (with Chips)</span> <span class="price">7.5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">BEANS</span> <span class="price">4.5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">SOUR CREAM</span> <span class="price">2</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">DRESSING</span> <span class="price">2</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">AVOCADO</span> <span class="price">5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">RICE</span> <span class="price">4.5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">TOMATILLO SALSA</span> <span class="price">2.5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">HABANERO SALSA</span> <span class="price">3</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">CHIPS & SALSA TO GO</span> <span class="price">5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">FRIES</span> <span class="price">5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">VEGGIES</span> <span class="price">7.5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">LIME or LEMON</span> <span class="price">1.5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">TORTILLAS</span> <span class="price">2.75</span>
+        </div>
+        <p>extras may be extra</p>
+    </div>
+
+    <div class="menu-section">
+        <h2 class="text-center">Breakfast ~ served all day</h2>
+        <div class="dish">
+            <span class="dish-name">CHILAQUILES*</span> <span class="price">13</span>
+            <div class="dish-desc">fried corn tortilla chips in salsa de tomate, topped w/ onion, tomato, cheese, sour cream & avocatl - with 2 Eggs 15 - with Meat & 2 Eggs 19</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">MACHACA</span> <span class="price">17</span>
+            <div class="dish-desc">Scramble with bell peppers, tomato, onion. Topped with sour cream & avocatl, sides of rice, beans & tortillas</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">HUEVOS CON CHORIZO</span> <span class="price">17</span>
+            <div class="dish-desc">Scramble with tomato, onion. Topped with sour cream & guacamole, sides of rice, beans & tortillas</div>
+        </div>
+        <div class="dish">
+            <span class="dish-name">HUEVOS RANCHEROS*</span> <span class="price">17</span>
+            <div class="dish-desc">tortilla topped w/2 eggs, beans & salsa ranchera, with a side of rice & tortillas</div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2 class="text-center">Drinks / Bebidas</h2>
+        <div class="dish">
+            <span class="dish-name">Aguas Frescas</span> <span class="price">5 (1 refill)</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Iced Tea</span> <span class="price">5 (refills)</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Jarritos/Snapple/Stewarts</span> <span class="price">4.5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Mexican Chocolate</span> <span class="price">6</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Hot Tea</span> <span class="price">3.5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Coffee</span> <span class="price">3.5 (refills)</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Coke Bottle</span> <span class="price">4</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">½ Liter Bottle</span> <span class="price">5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Can Soda</span> <span class="price">2.5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Corkage</span> <span class="price">10</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Non-Alcoholic Beer</span> <span class="price">5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Wine Glass</span> <span class="price">7.5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Wine Bottle</span> <span class="price">30</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Wine Margarita</span> <span class="price">7.75</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Margarita Jarra</span> <span class="price">30</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Draft Beer</span> <span class="price">16 oz -5 | 24 oz- 8.5 | 32 oz- 10.25</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">12 oz & 9.75% a/v Bottled Beer</span> <span class="price">8.75</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">22 oz & 9.75% a/v Bottled Beer</span> <span class="price">11.25</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">12 oz Bottled Beer</span> <span class="price">5</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">22/24 oz Bottled Beer</span> <span class="price">9.75</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">32 oz Bottled Beer</span> <span class="price">14.25</span>
+        </div>
+        <div class="dish">
+            <span class="dish-name">Michelada</span> <span class="price">+3 to Your Beer Price</span>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p class="notes">*CONSUMING RAW OR UNDERCOOKED MEATS, POULTRY, SEAFOOD, SHELLFISH, OR EGGS MAY INCREASE YOUR RISK OF FOODBORNE ILLNESS, ESPECIALLY IF YOU HAVE CERTAIN MEDICAL CONDITIONS.</p>
+    <p class="notes">NO SEPARATE CHECKS FOR PARTIES OF 5 OR MORE ~ 18% GRATUITY INCLUDED FOR PARTIES OF 5 OR MORE</p>
+    <p class="notes">SUBSTITUTIONS MAY INCLUDE ADDITIONAL CHARGES ~ TO SPLIT DISHES/ORDERS ADD 1.00</p>
+    <p class="notes">Prices Subject to Change</p>
+    <p>&copy; 2025 Las Palmas Cafe - Napa, CA. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
